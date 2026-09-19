@@ -1,0 +1,9 @@
+services:
+  api:
+    build: .
+    ports: 
+      - "8000:8000"
+    depends_on:
+      - redis-server
+  redis-server: 
+    image: redis:7-alpine
